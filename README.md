@@ -4,5 +4,5 @@ Breve descrição do grupo
 * Grupo: 03
 * Alunos:
     - Diogo Nunes up202007895 
-    - Aluno2 upZZZZZ
+    - Bruno Machado up201907715
     - Aluno3 upZZZZZ
