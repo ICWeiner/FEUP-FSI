@@ -7,6 +7,7 @@
 
 - [Local privilege escalation](https://encyclopedia.kaspersky.com/glossary/privilege-escalation/) This exploits are used to escalate privileges from Admin to SYSTEM.
 
+- The vulnerability was handled as a non-public zero-day exploit for at least 2 days.
 
 -  Affected Local systems:
    - Microsoft Windows 10
@@ -21,6 +22,8 @@
 
 - Vulnerability was publicly disclosed on the 11th February.
 
+- A fix was released by HP on the 12th February.
+
 - According to [NVD](https://nvd.nist.gov/vuln/detail/CVE-2019-18915) 7.8.
 
 
@@ -33,6 +36,8 @@ HPMSGSVC.exe runs a background process that delivers push notifications.
 if found in the users c:\ drive.
 
 - This results in arbitrary code execution persistence mechanism if an attacker can place an EXE in this location and can be used to escalate privileges from Admin to SYSTEM.
+
+- A public exploit has been developed by John Page (hyp3rlinx) and been published before and not just after the advisory. It is declared as highly functional. The download of the exploit is public for anyone.
 
 
 ### **Atacks**
