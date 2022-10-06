@@ -5,4 +5,4 @@ Breve descrição do grupo
 * Alunos:
     - Diogo Nunes up202007895 
     - Bruno Machado up201907715
-    - Aluno3 upZZZZZ
+    - Inês Almeida up202004513
