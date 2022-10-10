@@ -11,3 +11,7 @@ All of this is already provided in the "Makefile"
 
 Running the target program in debug mode, we extract the buffer´s starting position and the place where the return adress is stored
 
+Now to fill the missing data in exploit.py, we change add the shellcode code to the correct variable, calculate the starting position which is size of buffer (517 in this case) - lenght of the shellcode.
+ret is starting adress of buffer + 400( why 400?)
+offset is diference between ebp and start of buffer PLUS 4 (this moves the return address to the right address)
+we mantain the value of 4 since we use 32 bit shellcode.
