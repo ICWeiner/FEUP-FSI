@@ -22,7 +22,7 @@ Running the target program in debug mode, we extract the buffer´s starting posi
 
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/log5img3.PNG "Title")
 
-Now to fill the missing data in exploit.py, we change add the shellcode code to the correct variable, calculate the starting position which is size of buffer (517 in this case) - length of the shellcode.
+Now to fill the missing data in exploit.py, we add the shellcode code to the correct variable, calculate the starting position which is size of buffer (517 in this case) - length of the shellcode.
 ret is starting adress of buffer + 400 so it jumps to the middle of the NOP instructions an enventually get to the shellcode
 offset is diference between ebp and start of buffer PLUS 4 (this moves the return address to the right address)
 we mantain the value of 4 in the L variable since we use 32 bit shellcode.
