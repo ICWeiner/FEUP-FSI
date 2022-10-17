@@ -1,0 +1,2 @@
+go on /tmp/ create file named "env" and write to it echo "PATH=/tmp:$PATH" to run our version of printenv
+create a file named printenv and run "chmod 777 printenv", write "cat /flags/flag.txt" to it and wait from cron to run, you will now it ran when the "env" file disappears, after it disapears run cat last_log and the flag will be written in there, this works because a cron task runs periodically with elevated permissions
