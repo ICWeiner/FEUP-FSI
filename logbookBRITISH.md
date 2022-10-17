@@ -17,7 +17,7 @@ After some testing we find that we can change environment variables by altering 
 We grant all permissions to our "printenv" by running "chmod 777 printenv", and write inside it "cat /flags/flag.txt".
 Now all we need to do is wait until the next minute, followed by reading the contents of "last_log"
 
-#3 Example
+## Example
 
 A full example of this CTF can be found below
 
