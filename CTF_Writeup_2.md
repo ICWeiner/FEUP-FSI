@@ -1,9 +1,51 @@
-CTF 2
+# CTF 2
 
-Step 1
-Reading the code we see a buffer of 20 beinf written in a size of 28.
-We can cause a buffer overflow by wtiting 20 chars of something followed by flag.txt to get the program to open it instead of the one it normally would
 
-Step 2
-now we see that the area is protected by a memory address, with the default being 0xdeadbeef, written as \xef\xbe\xad\xde and the intended being 0xfefc2223.
-However the code still has the buffer overflow vulnerabilty so we can replace the value of the address by writing 20 chars followed by \x23\x22\xfc\xfe, followed by flag.txt.
+## Task 1
+
+### Checksec
+
+- Arch: 	i386-32-little
+- RELRO:	No RELRO
+- Stack:	No canary found
+- NX:		NX disabled
+- PIE:		No PIE
+- RWX:		Has RWX segments
+
+### Code analysis
+
+- Very overflow prone
+- Name of file is stored right after(in memory) the buffer that is overflow prone
+- Buffer is read straight from input, no filtering
+- Flag is in flag.txt, on the working directory
+
+### Exploit
+
+Exploiting this code is fairly easy, we only have to replace the contents of the "meme_file" array.  
+How? Simple  
+First we have to cause an overflow by writing any char a total of 20 times
+Since the function reads 28 chars on a buffer of 20 all chars read afterwards will be written to its neighbour, replacing its original content, in this case "meme_file".  
+Then we write "flag.txt", and since the code doesnt check for overflows, it will simply continue running with its new content and the flag is given to us.  
+
+
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf2img1.png "Title")
+
+## Task 2
+
+### Checksec
+
+Same as above
+
+### Code analysis
+
+Whats changed?  
+The program now has a new defense mechanism, altough not only does it suffer from the original overflow problem, the new defense ALSO suffers from overflow.  
+After some careful looking we realize that "0xdeadbeef" was written in code as "\xef\xbe\xad\xde"  
+So all we have to write "0xfefc2223" in this notation , "\x23\x22\xfc\xfe"  
+
+
+### Exploit
+
+First overflow "val", to be equal to the one in code, then overflow "meme_file" just like last time.  
+
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf2img2.png "Title")
