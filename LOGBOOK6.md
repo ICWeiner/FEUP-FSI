@@ -62,4 +62,12 @@ The server returns properly, how to change that?
 
 - Now, instead of any value, we have to edit it to a specific value of 0x5000(20480 in base 10)
 
-- To do that we to print the exact number of bytes
+- To do that we need the server to print 20480 characters(bytes).
+
+- As in last time we also need to print 63 "%x" before going to a %n to acess and edit the value, we achieved this with the following script
+
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/log6img10.PNG "Title")
+
+- Sending the file as usual and we can confirm our results
+
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/log6img11.PNG "Title")
