@@ -4,8 +4,8 @@
 
 - We use the technique we learned on LOGBOOK8 and write "admin';#" on the username field and random characters on the password field
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf3img1.PNG "Title")
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img1.PNG "Title")
 
 - And we sucessfully login as an admin and obtain the flag
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf3img2.PNG "Title")
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img2.PNG "Title")
