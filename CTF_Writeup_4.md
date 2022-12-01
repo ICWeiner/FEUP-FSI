@@ -20,7 +20,7 @@
 
 - NX is disabled, this means writable memory can also be executed.
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img1.PNG "Title")
+
 
 - Analyzing the supplied main.c we found that the vulnerability was in line 12 - gets(buffer) - since it allows us to write outside the supposed place allocated for the variable that is being changed (buffer overflow attack). 
 
@@ -30,8 +30,8 @@
 
 - We used the following exploit:
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img2.PNG "Title")
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img3.PNG "Title")
 
 - And we sucessfully get the flag:
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img3.PNG "Title")
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img4.PNG "Title")
