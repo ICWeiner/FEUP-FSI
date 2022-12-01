@@ -35,13 +35,13 @@ We start by taking a look around, and we find.
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img6.PNG "Title")
 
 
-- A secondary page with 2 features
+- A secondary page with 2 features  
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img7.PNG "Title")
 
-	- A speedtest
+	- A speedtest  
 	![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img8.PNG "Title")
 
-	- And a ping feature
+	- And a ping feature  
 	![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img9.PNG "Title")
 
 Of these features we find that.
