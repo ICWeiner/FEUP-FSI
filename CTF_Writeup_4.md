@@ -24,7 +24,8 @@ Checksec:
 
 Question 1:
 "What is the line of code where the vulnerability is found?"
-- Analyzing the supplied main.c we found that the vulnerability was in line 12 - gets(buffer).  gets() is a C function that reads a byte from the stdin until \0 or \n is found. 
+- Analyzing the supplied main.c we found that the vulnerability was in line 12 - gets(buffer).
+- gets() is a C function that reads a byte from the stdin until \0 or \n is found. 
 
 Question 2:
 "What does the vulnerability allow you to do?"
