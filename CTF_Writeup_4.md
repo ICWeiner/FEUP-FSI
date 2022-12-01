@@ -20,7 +20,7 @@
 
 - NX is disabled, this means writable memory can also be executed.
 
-
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img5.png "Title")
 
 - Analyzing the supplied main.c we found that the vulnerability was in line 12 - gets(buffer) - since it allows us to write outside the supposed place allocated for the variable that is being changed (buffer overflow attack). 
 
