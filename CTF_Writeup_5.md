@@ -24,5 +24,32 @@ Wait for a while, and suddenly...
 
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img5.PNG "Title")
 
-
 Flag obtained.
+
+## Challenge 2:Router 6G
+
+We start by taking a look around, and we find.
+
+- A login page.
+
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img6.PNG "Title")
+
+
+- A secondary page with 2 features
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img7.PNG "Title")
+
+	- A speedtest
+	![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img8.PNG "Title")
+
+	- And a ping feature
+	![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img9.PNG "Title")
+
+Of these features we find that.
+
+- The ping feature seems to use the linux "ping" command internally, as the output seems identical to the one in our seed VM
+
+ ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img10.PNG "Title")
+
+ - The login feature redirects to a "login.php" file that tells us our data is incorrect and isnt redirecting us to anywhere.
+
+  ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img11.PNG "Title")
