@@ -22,7 +22,7 @@ We then write the following code.
 
 Wait for a while, and suddenly...
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img4.PNG "Title")
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img5.PNG "Title")
 
 
 Flag obtained.
