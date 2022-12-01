@@ -12,7 +12,7 @@
 
 ### Challenge 2
 
-#Checksec:
+##Checksec:
 
 - The execution of checksec in the executable shows that PIE is enable and NX is disable. 
 
