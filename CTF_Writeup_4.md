@@ -30,8 +30,8 @@
 
 - We used the following exploit:
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img3.PNG "Title")
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img3.png "Title")
 
 - And we sucessfully get the flag:
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img4.PNG "Title")
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img4.png "Title")
