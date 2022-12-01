@@ -12,7 +12,7 @@
 
 ### Challenge 2
 
-Checksec:
+## Checksec:
 
 - The execution of checksec in the executable shows that PIE is enable and NX is disable. 
 
@@ -22,14 +22,20 @@ Checksec:
 
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img5.png "Title")
 
-Question 1:
+------------------------------
+## Question 1
+
 "What is the line of code where the vulnerability is found?"
+
 - Analyzing the supplied main.c we found that the vulnerability was in line 12 - gets(buffer).
 - gets() is a C function that reads a byte from the stdin until \0 or \n is found. 
 
-Question 2:
+## Question 2:
+
 "What does the vulnerability allow you to do?"
+
 - This vulnerability allow us to overwrite the value of the return address, inject shellcode, and then jump to that code, which will be executed automatically.
+
 --------------------------------------------------------------
 
 - We used gdb to analyse program and found that 108 is the offset we need to alter the return adress.
