@@ -26,7 +26,7 @@ Wait for a while, and suddenly...
 
 Flag obtained.
 
-## Challenge 2:Router 6G
+## Challenge 2: Router 6G
 
 We start by taking a look around, and we find.
 
