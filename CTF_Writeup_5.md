@@ -53,3 +53,32 @@ Of these features we find that.
  - The login feature redirects to a "login.php" file that tells us our data is incorrect and isnt redirecting us to anywhere.
 
   ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img11.PNG "Title")
+
+
+We explored the challenge by the way of the "ping a host" page, since it seems to run the ping command, we can try adding additional commands, which will run *if* the input isn´t sanitized.
+
+We used the follwing command to see what files maybe on the working directory.
+
+A ";" character is provided at the beginning to end the ping command and start writing whatever commands we want.
+
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img12.PNG "Title")
+
+And we can see an output that contains a "flags" folder.
+
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img13.PNG "Title")
+
+Repeat the same process, but this time for the "flags" folder.
+
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img14.PNG "Title")
+
+Now we found the file containing the flag.
+
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img15.PNG "Title")
+
+So now all we need to do is print it, since it shouldn´t have any sort of protections
+
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img16.PNG "Title")
+
+And like that, we obtain the flag
+
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf5img17.PNG "Title")
