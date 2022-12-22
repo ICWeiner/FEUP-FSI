@@ -90,7 +90,7 @@ openssl req -newkey rsa:2048 -sha256 -keyout server.key -out server.csr -subj "/
 
 With the "subjectAltName", we added two alternative names, pointing to the same web server.
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img7.png "Title")
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img8.png "Title")
 
 
 ### Task 3: Generating a Certificate for your server
@@ -103,7 +103,6 @@ openssl ca -config openssl.cnf -policy policy_anything \
 -in server.csr -out server.crt -batch \
 -cert ca.crt -keyfile ca.key
 ```
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img8.png "Title")
 
 For security reasons, the default setting in openssl.cnf does not allow the "openssl ca" command to copy the extension field from the request to the final certificate, so we need to enable it:
 
