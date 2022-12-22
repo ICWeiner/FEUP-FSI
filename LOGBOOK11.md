@@ -30,7 +30,7 @@ new_certs_dir = $dir/newcerts
 serial = $dir/serial
 ```
 
-Next, create the necessary files, like an empty file (index.txt) and the serial file with a number in the string format in it ("1000").
+Next, we create the necessary files, like an empty file (index.txt) and the serial file with a number in the string format in it ("1000").
 
 ```shell
 mkdir demoCA
