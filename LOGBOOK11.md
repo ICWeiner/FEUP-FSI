@@ -97,27 +97,13 @@ With the "subjectAltName", we added two alternative names, pointing to the same 
 
 Using the files created (ca.crt and ca.key), we generate the certificate, with the follwing command:
 
-```shell
-openssl ca -config openssl.cnf -policy policy_anything \
--md sha256 -days 3650 \
--in server.csr -out server.crt -batch \
--cert ca.crt -keyfile ca.key
-```
+![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img9.png "Title")
 
 For security reasons, the default setting in openssl.cnf does not allow the "openssl ca" command to copy the extension field from the request to the final certificate, so we need to enable it:
 
 ```shell
 copy_extensions = copy
 ```
-
-```shell
-openssl x509 -in server.crt -text -noout
-```
-
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img9.png "Title")
-
-
-The alternative names are included.
 
 ### Task 4: Deploying Certificate in an Apache-based HTTPS Website
 
