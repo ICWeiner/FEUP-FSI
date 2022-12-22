@@ -167,6 +167,11 @@ l11g03_apache_sll.conf:
 
 Now we can build and run the container. We can start the server after configure the apache.
 
+```shell
+docker-compose build 
+docker-compose up
+```
+
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img11.png "Title")
 
 Searching for our server we can find:
