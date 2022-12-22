@@ -9,14 +9,14 @@ sudo nano /etc/hosts
 
 ### Task 1: Becoming a Certificate Authority (CA)
 
-In this task, we will make ourselves a root CA, and generate a certificate for this CA. First we started by copying openssl.cnf to our working directory, so then we can change it.
+In this task, we will make ourselves a root CA, and generate a certificate for this CA. First we started by copying openssl.cnf to our working directory, so that we can change it.
 
 ```shell
 # cd path/to/Labsetup
 cp /usr/lib/ssl/openssl.cnf ./openssl.cnf
 ```
 
-Then, like resquested, we uncomment the unique subject line, under [CA default], inside the openssl.cnf file to allow the creation of certifications with the same subject.
+Then, like requested, we uncomment the unique subject line, under [CA default], inside the openssl.cnf file to allow the creation of certifications with the same subject.
 
 ```shell
 dir = ./demoCA
@@ -45,7 +45,7 @@ To finish, we need to generate a self-signed certificate for our CA, by running 
 openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -keyout ca.key -out ca.crt -subj "/CN=www.modelCA.com/O=Model CA LTD./C=US" -passout pass:dees
 ```
 
-With this we already specified the all the information of the subject and the password needed, so any additional information will not be promted.
+With this we already specified all the information of the subject and the password needed, so any additional information will not be prompted.
 
 ### Questions
 
@@ -54,7 +54,7 @@ openssl x509 -in ca.crt -text -noout
 openssl rsa  -in ca.key -text -noout
 ```
 
-First we run this commands so we can look the content into plain text.
+First we run these commands so we can look at the content as plain text.
 
 **Question 1**
 
@@ -65,14 +65,14 @@ What part of the certificate indicates this is a CA’s certificate?
 
 **Question 2**
 
-What part of the certificate indicates this is a self-signed certificate?
+What part of the certificate indicates that this is a self-signed certificate?
 - The Subject Key Identifier and the Authority Key Identifier are the same.
 
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img3.png "Title")
 
 **Question 3**
 
-In the RSA algorithm, we have a public exponent, a private exponent `d`, a modulus `n`, and two secret numbers `p` and `q`, such that `n=pq`. Please identify the values for these elements in your certificate and key files.
+In the RSA algorithm, we have a public exponent, a private exponent `d`, a modulus `n`, and two secret numbers `p` and `q`, such that `n=p*q`. Please identify the values for these elements in your certificate and key files.
 - p and q are prime1 and prime2
 
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img4.png "Title")
@@ -95,11 +95,11 @@ With the "subjectAltName", we added two alternative names, pointing to the same 
 
 ### Task 3: Generating a Certificate for your server
 
-Using the files created (ca.crt and ca.key), we generate the certificate, with the follwing command:
+Using the files created (ca.crt and ca.key), we generate the certificate, with the following command:
 
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img9.png "Title")
 
-For security reasons, the default setting in openssl.cnf does not allow the "openssl ca" command to copy the extension field from the request to the final certificate, so we need to enable it:
+For security reasons, the default setting in openssl.cnf doesn´t allow the "openssl ca" command to copy the extension field from the request to the final certificate, so we need to enable it:
 
 ```shell
 copy_extensions = copy
@@ -109,7 +109,7 @@ copy_extensions = copy
 
 For this task we had to deploy a webiste with a certificate (https connection).
 
-For that, we start by edit the folder image_www updating the certs, dockerfile, and the config file.
+To achieve that, we start by editing the folder image_www updating the certs, dockerfile, and the config file.
 
 Dockerfile:
 ```shell
@@ -172,21 +172,21 @@ Now, our connection is secure.
 
 ### Task 5: Launching a Man-In-The-Middle Attack
 
-In this task we can test how public-key encryption based on Certification Authority signature is capable to handle MITM attacks as long as the certification keys are not compromised. For this, we need to setup a fake "www.fsi.com" changing the config file and the hosts folder.
+In this task we can test public-key encryption based on Certification Authority signature capability´s to handle MITM attacks as long as the certification keys are not compromised. For this, we need to setup a fake "www.fsi.com" changing the config file and the hosts folder.
 
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img14.png "Title")
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img15.png "Title")
 
 Now, we can rebuild docker and start apache once again.
 
-The server is running but when we try to acces it gives us a different warning:
+The server is running but when we try to access it gives us a different warning:
 
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img16.png "Title")
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img17.png "Title")
 
-This happens because we are trying to use the certificate we generate for "www.l11g03.com" with "www.fsi.com". Firefox can recognize that something is not right and gives us this warning.
+This happens because we are trying to use the certificate we generate for "www.l11g03.com" with "www.fsi.com". Firefox recognizes that something isn´t right and gives us this warning.
 
-The MITM attack was not successful. Browser could pick it up.
+The MITM attack was not successful. The Browser was able to pick it up.
 
 ### Task 6: Launching a Man-In-The-Middle Attack with a Compromised CA
 
@@ -208,4 +208,4 @@ We can acess the site and see that is secure.
 
 Firefox still shows us a message but we get no warnings this time.
 
-The MITM attack was successful. From this we conclude that if the CA is compromised, then an attacker can create a certificate for themselves and impersonate a website. 
+This time the MITM attack was successful. From this we conclude that if the CA is compromised, then an attacker can create a certificate for themselves and impersonate a website. 
