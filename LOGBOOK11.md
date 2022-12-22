@@ -1,7 +1,5 @@
 # Public-Key Infrastructure (PKI)
 
-## Logbook Week 11
-
 ### Lab Environment
 
 ```shell
