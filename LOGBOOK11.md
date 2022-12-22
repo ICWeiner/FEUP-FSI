@@ -58,21 +58,24 @@ openssl rsa  -in ca.key -text -noout
 
 First we run this commands so we can look the content into plain text.
 
-**What part of the certificate indicates this is a CA’s certificate?**
+**Question 1**
 
-CA:TRUE
+What part of the certificate indicates this is a CA’s certificate?
+- CA:TRUE
 
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img2.png "Title")
 
-**What part of the certificate indicates this is a self-signed certificate?**
+**Question 2**
 
-The Subject Key Identifier and the Authority Key Identifier are the same.
+What part of the certificate indicates this is a self-signed certificate?
+- The Subject Key Identifier and the Authority Key Identifier are the same.
 
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img3.png "Title")
 
-**In the RSA algorithm, we have a public exponent, a private exponent `d`, a modulus `n`, and two secret numbers `p` and `q`, such that `n=pq`. Please identify the values for these elements in your certificate and key files.**
+**Question 3**
 
-p and q are prime1 and prime2
+In the RSA algorithm, we have a public exponent, a private exponent `d`, a modulus `n`, and two secret numbers `p` and `q`, such that `n=pq`. Please identify the values for these elements in your certificate and key files.
+- p and q are prime1 and prime2
 
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img4.png "Title")
 ![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/logbook11img5.png "Title")
