@@ -8,21 +8,21 @@ Our first objective is to find the exact values for p and q.
 
 This is easily achived with the following python code.
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf6img1.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf6img1.PNG "Title")
 
 Next we need to get the value of d, which is used to decode the flag.
 
 We get d with the following code.
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf6img2.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf6img2.PNG "Title")
 
 Now we just need to get the enconded flag from the server...
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf6img3.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf6img3.PNG "Title")
 
 And decode using the script.
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf6img4.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf6img4.PNG "Title")
 
 Flag obtained.
 
@@ -34,35 +34,35 @@ We did some research on possible attacks on RSA and found some general ideias on
 
 We start by saving this data to a python script, somewhat inspired by the last challenge, which we will use to decode the flag.
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf6img5.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf6img5.PNG "Title")
 
 We then find that if the gcd of e1 and e2 = 1, then there exists 2 values, a and b such that e1 * a + e2 * b = 1
 
 So we implement egcd in our script.
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf6img5.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf6img5.PNG "Title")
 
 And run it, finding the values for a and b.
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf6img6.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf6img6.PNG "Title")
 
 Since b is negative...
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf6img7.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf6img7.PNG "Title")
 
  We need an i equal to c2(encrypted message) to the power of -1 modulus(%) of n (c2^-1 % n)
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf6img8.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf6img8.PNG "Title")
 
 Finally, we have all the values we need to decrypt the message and obtain the value.
 
 The final computation is as follows
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf6img9.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf6img9.PNG "Title")
 
 Now we just run the code and obtain the flag.
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf6img10.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf6img10.PNG "Title")
 
 We also noticed that the code took quite a bit to run, and so we re-ran it using "time", for curiosity´s sake and found that on our machine it took almost 2 minutes(!), perhaps there is some more efficient way of running this attack?
 

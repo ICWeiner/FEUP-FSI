@@ -2,12 +2,12 @@
 
 To start off, we read both files that are placed in the starting directory (/home/flag_reader) 
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctfbritish1.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctfbritish1.PNG "Title")
 
 We can see that "main.c" tries to access "flags/flag.txt" and that "my_script.sh" will enter an if section when there is a "env" file in /tmp/.
 
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctfbritish2.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctfbritish2.PNG "Title")
 
 By navigating to /tmp/ we also find a "last_log" file that seems to be generated every minute by a "cron" service and seems to contain output from both "my_script.sh" AND "main.c" AND it has permissions since it writes "File exists!!". This file also belongs to "flag_reader" so whatever generates it should be exploitable, if we can abuse of that "printenv" in "my_script.sh" 
 
@@ -21,4 +21,4 @@ Now all we need to do is wait until the next minute, followed by reading the con
 
 A full example of this CTF can be found below
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctfbritish3.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctfbritish3.PNG "Title")

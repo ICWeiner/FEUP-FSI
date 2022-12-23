@@ -28,7 +28,7 @@ Since the function reads 28 chars on a buffer of 20 all chars read afterwards wi
 Then we write "flag.txt", and since the code doesnt check for overflows, it will simply continue running with its new content and the flag is given to us.  
 
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf2img1.png "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf2img1.png "Title")
 
 ## Task 2
 
@@ -48,4 +48,4 @@ So all we have to write "0xfefc2223" in this notation , "\x23\x22\xfc\xfe"
 
 First overflow "val", to be equal to the one in code, then overflow "meme_file" just like last time.  
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf2img2.png "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf2img2.png "Title")

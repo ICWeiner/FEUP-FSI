@@ -4,11 +4,11 @@
 
 - We use the technique we learned on LOGBOOK8 and write "admin';#" on the username field and random characters on the password field
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img1.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf4img1.PNG "Thttps://git.fe.up.pt/fsi/fsi2223/l11g03/-/rawitle")
 
 - And we sucessfully login as an admin and obtain the flag
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img2.PNG "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf4img2.PNG "Title")
 
 ### Challenge 2
 
@@ -20,7 +20,7 @@
 
 - NX is disabled, this means writable memory can also be executed.
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img5.png "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf4img5.png "Title")
 
 ------------------------------
 ## Question 1
@@ -44,8 +44,8 @@
 
 - We used the following exploit:
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img3.png "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf4img3.png "Title")
 
 - And we sucessfully get the flag:
 
-![alt text](https://git.fe.up.pt/fsi/fsi2223/l11g03/-/raw/main/imgs/ctf4img4.png "Title")
+![alt text](https://github.com/ICWeiner/FEUP-FSI/blob/main/imgs/ctf4img4.png "Title")
